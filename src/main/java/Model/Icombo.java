@@ -9,6 +9,7 @@ package Model;
  *
  * @author derec
  */
-public interface Icombo {
-    
+public interface Icombo<T extends Icombo>extends Cloneable {
+    public T clone();
+    public T deepClone();
 }

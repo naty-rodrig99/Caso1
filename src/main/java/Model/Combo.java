@@ -9,7 +9,7 @@ import java.util.ArrayList;
  *
  * @author derec
  */
-public class Combo {
+public class Combo implements Icombo<Combo> {
     private Plato plato;
     private ArrayList<Bebida> bebida;
     private ArrayList<Adicional> adicional;
@@ -36,5 +36,15 @@ public class Combo {
     }
     public ArrayList<Adicional> getAdicional(){
         return this.adicional;
+    }
+    
+    @Override
+    public Combo clone(){
+        return new Combo(this.plato,this.bebida,this.adicional);
+    }
+    
+    @Override
+    public Combo deepClone(){
+        return clone();
     }
 }
