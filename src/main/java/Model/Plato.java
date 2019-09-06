@@ -9,7 +9,7 @@ package Model;
 public class Plato extends Producto{
     
     
-    Plato(String cod,String nom,Float pre){
+    public Plato(String cod,String nom,int pre){
         
         super(cod,nom,pre);
     }

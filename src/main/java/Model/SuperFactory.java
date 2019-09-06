@@ -14,7 +14,7 @@ public class SuperFactory implements IcomboFactoryMethod{
     
     @Override
     public void createCombo(String type){       //que retorne Combo
-        if(type.equals("este")){
+        if(type.equals("predefinido")){
             //haga esto
         }
         if (type.equals("El otro")){

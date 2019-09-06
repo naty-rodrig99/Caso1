@@ -12,7 +12,7 @@ package Model;
 public class Bebida extends Producto{
     
     
-    Bebida(String cod,String nom,Float pre){
+    public Bebida(String cod,String nom,int pre){
         
         super(cod,nom,pre);
     }

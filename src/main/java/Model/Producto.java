@@ -4,9 +4,9 @@ package Model;
 public class Producto implements Icombo {
     private String codigo;
     private String nombre;
-    private Float precio;
+    private int precio;
     
-    public Producto(String cod,String nom,Float pre){
+    public Producto(String cod,String nom,int pre){
         this.codigo= cod;
         this.nombre= nom;
         this.precio= pre;
@@ -18,7 +18,7 @@ public class Producto implements Icombo {
     public void setNombre(String nom){
         this.nombre = nom;
     }
-    public void setPrecio(Float pre){
+    public void setPrecio(int pre){
         this.precio = pre;
     }
     public String getCodigo(){
@@ -27,7 +27,7 @@ public class Producto implements Icombo {
     public String getNombre(){
         return this.nombre ;
     }
-    public Float getPrecio(){
+    public int getPrecio(){
         return this.precio;
     }
      @Override
@@ -39,6 +39,8 @@ public class Producto implements Icombo {
     public Producto deepClone() {
         return clone();  
     }
+    
+    
             
 }
 

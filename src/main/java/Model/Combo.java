@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Combo implements Icombo<Combo> {
     
-    private ArrayList<Producto> productos;
+    private ArrayList<Producto> productos = new ArrayList<>();
        
     public Combo(ArrayList<Producto> pro){
        
@@ -39,7 +39,7 @@ public class Combo implements Icombo<Combo> {
     
     public static class ComboBuilder extends Combo implements IBuilder<Combo>{
     
-        ComboBuilder(String nombre,ArrayList<Producto> productos){
+        public ComboBuilder(String nombre,ArrayList<Producto> productos){
 
             super(productos);
         }
@@ -48,25 +48,27 @@ public class Combo implements Icombo<Combo> {
 
         }
 
-        public ComboBuilder addPlato(String codigo, String nombre, float precio){
-            super.getProductos().add((Producto) new Plato(codigo,nombre,precio));
+        public ComboBuilder addProducto(Producto prod){
+            super.getProductos().add((prod));
             return this;
         }
         
-        public ComboBuilder addAdicional(String codigo, String nombre, float precio){
-            super.getProductos().add((Producto) new Adicional(codigo,nombre,precio));
-            return this;
-        }
         
-        public ComboBuilder addBebida(String codigo, String nombre, float precio){
-            super.getProductos().add((Producto) new Bebida(codigo,nombre,precio));
-            return this;
-        }
 
         @Override
         public Combo build() {
             return new Combo(super.getProductos());
         }
 
+    }
+    
+    
+    
+     public static void main(String args[]) {
+        
+       //ComboBuilder c1 = new Combo.ComboBuilder().addPlato("1", "gato encebollado", 2200).addBebida("2", "fresco", 500).addAdicional("1", "cebolla", 100).build();
+       //Producto p = (Producto)(new Plato("P-01","Hamburguesa",1200));
+       //System.out.println("hola");
+       
     }
 }
