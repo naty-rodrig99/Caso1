@@ -5,46 +5,68 @@
  */
 package Model;
 import java.util.ArrayList;
-/**
- *
- * @author derec
- */
+
 public class Combo implements Icombo<Combo> {
-    private Plato plato;
-    private ArrayList<Bebida> bebida;
-    private ArrayList<Adicional> adicional;
     
-    public Combo(Plato pla,ArrayList<Bebida> beb, ArrayList<Adicional> adi){
-        this.plato = pla;
-        this.bebida = beb;
-        this.adicional = adi;
+    private ArrayList<Producto> productos;
+       
+    public Combo(ArrayList<Producto> pro){
+       
+        this.productos = pro;
     }
-    public void setPlato(Plato p){
-        this.plato = p;
+
+    public Combo() {
     }
-    public void setBebida(ArrayList<Bebida> b){
-        this.bebida = b;
+
+    public void setProductos(ArrayList<Producto> pro){
+        this.productos = pro;
     }
-    public void setAdicional(ArrayList<Adicional> a){
-        this.adicional = a;
+    public ArrayList<Producto> getProductos(){
+        return this.productos ;
     }
-    public Plato getPlato(){
-        return this.plato;
-    }
-    public ArrayList<Bebida> getBebida(){
-        return this.bebida ;
-    }
-    public ArrayList<Adicional> getAdicional(){
-        return this.adicional;
-    }
+    
+    
     
     @Override
     public Combo clone(){
-        return new Combo(this.plato,this.bebida,this.adicional);
+        return new Combo(this.productos);
     }
     
     @Override
     public Combo deepClone(){
         return clone();
+    }
+    
+    public static class ComboBuilder extends Combo implements IBuilder<Combo>{
+    
+        ComboBuilder(String nombre,ArrayList<Producto> productos){
+
+            super(productos);
+        }
+
+        public ComboBuilder(){
+
+        }
+
+        public ComboBuilder addPlato(String codigo, String nombre, float precio){
+            super.getProductos().add((Producto) new Plato(codigo,nombre,precio));
+            return this;
+        }
+        
+        public ComboBuilder addAdicional(String codigo, String nombre, float precio){
+            super.getProductos().add((Producto) new Adicional(codigo,nombre,precio));
+            return this;
+        }
+        
+        public ComboBuilder addBebida(String codigo, String nombre, float precio){
+            super.getProductos().add((Producto) new Bebida(codigo,nombre,precio));
+            return this;
+        }
+
+        @Override
+        public Combo build() {
+            return new Combo(super.getProductos());
+        }
+
     }
 }

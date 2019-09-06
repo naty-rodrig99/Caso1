@@ -1,7 +1,7 @@
 package Model;
 
 
-public class Producto {
+public class Producto implements Icombo {
     private String codigo;
     private String nombre;
     private Float precio;
@@ -29,6 +29,15 @@ public class Producto {
     }
     public Float getPrecio(){
         return this.precio;
+    }
+     @Override
+    public Producto clone() {
+        return new Producto(this.codigo,this.nombre, this.precio);
+    }
+    
+    @Override
+    public Producto deepClone() {
+        return clone();  
     }
             
 }
