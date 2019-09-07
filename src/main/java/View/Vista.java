@@ -17,7 +17,7 @@ public class Vista extends javax.swing.JFrame {
     public Vista() {
         initComponents();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,48 +27,57 @@ public class Vista extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButtonCombo1 = new javax.swing.JButton();
-        jButtonCombo2 = new javax.swing.JButton();
-        jButtonCombo3 = new javax.swing.JButton();
-        jButtonCombo4 = new javax.swing.JButton();
-        jButtonCombo5 = new javax.swing.JButton();
+        btnCombo1 = new javax.swing.JButton();
+        btnCombo2 = new javax.swing.JButton();
+        btnCombo3 = new javax.swing.JButton();
+        btnCombo4 = new javax.swing.JButton();
+        btnCombo5 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButtonBebida1 = new javax.swing.JButton();
-        jButtonBebida2 = new javax.swing.JButton();
-        jButtonBebida3 = new javax.swing.JButton();
-        jButtonAdicional1 = new javax.swing.JButton();
-        jButtonAdicional2 = new javax.swing.JButton();
-        jButtonPlato1 = new javax.swing.JButton();
-        jButtonAdicional3 = new javax.swing.JButton();
-        jButtonPlato2 = new javax.swing.JButton();
-        jButtonPlato3 = new javax.swing.JButton();
-        jButtonAgregar = new javax.swing.JButton();
-        jButtonCrearCombo = new javax.swing.JButton();
+        btnGaseosa = new javax.swing.JButton();
+        btnCafe = new javax.swing.JButton();
+        btnNatural = new javax.swing.JButton();
+        btnPapas = new javax.swing.JButton();
+        btnPure = new javax.swing.JButton();
+        btnHamburguesa = new javax.swing.JButton();
+        btnTresleches = new javax.swing.JButton();
+        btnPollo = new javax.swing.JButton();
+        btnPizza = new javax.swing.JButton();
+        btnAdd = new javax.swing.JButton();
+        btnCrear = new javax.swing.JButton();
         jTextFactura = new javax.swing.JTextField();
+        btnEnsalada = new javax.swing.JButton();
+        btnHotDog = new javax.swing.JButton();
+        btnBorrar = new javax.swing.JButton();
+        btnTotal = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButtonCombo1.setBackground(new java.awt.Color(255, 51, 51));
-        jButtonCombo1.setText("Combo1");
-
-        jButtonCombo2.setBackground(new java.awt.Color(255, 0, 0));
-        jButtonCombo2.setText("Combo2");
-
-        jButtonCombo3.setBackground(new java.awt.Color(255, 51, 0));
-        jButtonCombo3.setText("Combo3");
-
-        jButtonCombo4.setBackground(new java.awt.Color(255, 0, 0));
-        jButtonCombo4.setText("Combo4");
-        jButtonCombo4.addActionListener(new java.awt.event.ActionListener() {
+        btnCombo1.setBackground(new java.awt.Color(255, 51, 51));
+        btnCombo1.setText("Combo1");
+        btnCombo1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCombo4ActionPerformed(evt);
+                btnCombo1ActionPerformed(evt);
             }
         });
 
-        jButtonCombo5.setBackground(new java.awt.Color(255, 0, 0));
-        jButtonCombo5.setText("Combo5");
+        btnCombo2.setBackground(new java.awt.Color(255, 0, 0));
+        btnCombo2.setText("Combo2");
+
+        btnCombo3.setBackground(new java.awt.Color(255, 51, 0));
+        btnCombo3.setText("Combo3");
+
+        btnCombo4.setBackground(new java.awt.Color(255, 0, 0));
+        btnCombo4.setText("Combo4");
+        btnCombo4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCombo4ActionPerformed(evt);
+            }
+        });
+
+        btnCombo5.setBackground(new java.awt.Color(255, 0, 0));
+        btnCombo5.setText("Combo5");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("BEBIDAS");
@@ -79,80 +88,110 @@ public class Vista extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel3.setText("ADICIONALES");
 
-        jButtonBebida1.setBackground(new java.awt.Color(153, 153, 153));
-        jButtonBebida1.setText("Bebida1");
+        btnGaseosa.setBackground(new java.awt.Color(153, 153, 153));
+        btnGaseosa.setText("Gaseosa");
 
-        jButtonBebida2.setBackground(new java.awt.Color(153, 153, 153));
-        jButtonBebida2.setText("Bebida2");
+        btnCafe.setBackground(new java.awt.Color(153, 153, 153));
+        btnCafe.setText("Cafe");
 
-        jButtonBebida3.setBackground(new java.awt.Color(153, 153, 153));
-        jButtonBebida3.setText("Bebida3");
+        btnNatural.setBackground(new java.awt.Color(153, 153, 153));
+        btnNatural.setText("Natural");
 
-        jButtonAdicional1.setBackground(new java.awt.Color(153, 153, 153));
-        jButtonAdicional1.setText("Adicional1");
-        jButtonAdicional1.addActionListener(new java.awt.event.ActionListener() {
+        btnPapas.setBackground(new java.awt.Color(153, 153, 153));
+        btnPapas.setText("Papas");
+        btnPapas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAdicional1ActionPerformed(evt);
+                btnPapasActionPerformed(evt);
             }
         });
 
-        jButtonAdicional2.setBackground(new java.awt.Color(153, 153, 153));
-        jButtonAdicional2.setText("Adicional2");
-        jButtonAdicional2.addActionListener(new java.awt.event.ActionListener() {
+        btnPure.setBackground(new java.awt.Color(153, 153, 153));
+        btnPure.setText("Pure");
+        btnPure.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAdicional2ActionPerformed(evt);
+                btnPureActionPerformed(evt);
             }
         });
 
-        jButtonPlato1.setBackground(new java.awt.Color(153, 153, 153));
-        jButtonPlato1.setText("Plato1");
-        jButtonPlato1.addActionListener(new java.awt.event.ActionListener() {
+        btnHamburguesa.setBackground(new java.awt.Color(153, 153, 153));
+        btnHamburguesa.setText("Hamburguesa");
+        btnHamburguesa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonPlato1ActionPerformed(evt);
+                btnHamburguesaActionPerformed(evt);
             }
         });
 
-        jButtonAdicional3.setBackground(new java.awt.Color(153, 153, 153));
-        jButtonAdicional3.setText("Adicional3");
-        jButtonAdicional3.addActionListener(new java.awt.event.ActionListener() {
+        btnTresleches.setBackground(new java.awt.Color(153, 153, 153));
+        btnTresleches.setText("Tres Leches");
+        btnTresleches.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAdicional3ActionPerformed(evt);
+                btnTreslechesActionPerformed(evt);
             }
         });
 
-        jButtonPlato2.setBackground(new java.awt.Color(153, 153, 153));
-        jButtonPlato2.setText("Plato2");
-        jButtonPlato2.addActionListener(new java.awt.event.ActionListener() {
+        btnPollo.setBackground(new java.awt.Color(153, 153, 153));
+        btnPollo.setText("Pollo");
+        btnPollo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonPlato2ActionPerformed(evt);
+                btnPolloActionPerformed(evt);
             }
         });
 
-        jButtonPlato3.setBackground(new java.awt.Color(153, 153, 153));
-        jButtonPlato3.setText("Plato3");
-        jButtonPlato3.addActionListener(new java.awt.event.ActionListener() {
+        btnPizza.setBackground(new java.awt.Color(153, 153, 153));
+        btnPizza.setText("Pizza");
+        btnPizza.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonPlato3ActionPerformed(evt);
+                btnPizzaActionPerformed(evt);
             }
         });
 
-        jButtonAgregar.setBackground(new java.awt.Color(255, 153, 51));
-        jButtonAgregar.setText("AGREGAR");
-        jButtonAgregar.addActionListener(new java.awt.event.ActionListener() {
+        btnAdd.setBackground(new java.awt.Color(255, 153, 51));
+        btnAdd.setText("AGREGAR");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAgregarActionPerformed(evt);
+                btnAddActionPerformed(evt);
             }
         });
 
-        jButtonCrearCombo.setBackground(new java.awt.Color(255, 153, 51));
-        jButtonCrearCombo.setText("CREAR COMBO");
-        jButtonCrearCombo.addActionListener(new java.awt.event.ActionListener() {
+        btnCrear.setBackground(new java.awt.Color(255, 153, 51));
+        btnCrear.setText("CREAR COMBO");
+        btnCrear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCrearComboActionPerformed(evt);
+                btnCrearActionPerformed(evt);
             }
         });
 
-        jTextFactura.setText("jTextField1");
+        btnEnsalada.setBackground(new java.awt.Color(153, 153, 153));
+        btnEnsalada.setText("Ensalada");
+        btnEnsalada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEnsaladaActionPerformed(evt);
+            }
+        });
+
+        btnHotDog.setBackground(new java.awt.Color(153, 153, 153));
+        btnHotDog.setText("Hot Dog");
+        btnHotDog.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHotDogActionPerformed(evt);
+            }
+        });
+
+        btnBorrar.setBackground(new java.awt.Color(255, 153, 51));
+        btnBorrar.setText("BORRAR PEDIDO");
+        btnBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrarActionPerformed(evt);
+            }
+        });
+
+        btnTotal.setBackground(new java.awt.Color(255, 153, 51));
+        btnTotal.setText("TOTAL");
+        btnTotal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTotalActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -167,48 +206,59 @@ public class Vista extends javax.swing.JFrame {
                             .addComponent(jLabel2)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jButtonPlato1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButtonPlato2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jButtonBebida1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(45, 45, 45)
-                                    .addComponent(jButtonBebida2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jButtonAdicional1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(54, 54, 54)
-                                    .addComponent(jButtonAdicional2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(54, 54, 54)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButtonBebida3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonAdicional3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonPlato3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButtonCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(61, 61, 61)
-                                .addComponent(jButtonCombo2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(48, 48, 48)
-                                .addComponent(jButtonCombo3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(57, 57, 57)
-                                .addComponent(jButtonCombo4, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(53, 53, 53)
-                                .addComponent(jButtonCombo5, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(46, 46, 46)
-                                        .addComponent(jButtonAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(81, 81, 81)
-                                        .addComponent(jButtonCrearCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel1))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
-                                .addComponent(jTextFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addComponent(btnPapas, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btnPure, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(36, 36, 36))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel1)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(btnGaseosa, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(45, 45, 45)
+                                            .addComponent(btnCafe, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(54, 54, 54)
+                                .addComponent(btnNatural, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnHamburguesa, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnPollo, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnPizza, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnHotDog, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(btnCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(51, 51, 51)
+                        .addComponent(btnCombo2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(58, 58, 58)
+                        .addComponent(btnCombo3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(57, 57, 57)
+                        .addComponent(btnCombo4, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(53, 53, 53)
+                        .addComponent(btnCombo5, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(btnTresleches, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnEnsalada, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnCrear, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)))
+                        .addComponent(jTextFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(26, 26, 26))
         );
         layout.setVerticalGroup(
@@ -216,46 +266,51 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonCombo2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonCombo3, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonCombo4, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonCombo5, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCombo2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCombo3, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCombo4, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCombo5, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(186, 186, 186)
-                                .addComponent(jButtonAdicional3, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(29, 29, 29)
+                                .addGap(224, 224, 224)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jButtonBebida1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButtonBebida2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButtonBebida3, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(btnEnsalada, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnTresleches, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(40, 40, 40)
+                                .addComponent(jLabel1)
+                                .addGap(27, 27, 27)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(btnGaseosa, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnCafe, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnNatural, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(31, 31, 31)
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jButtonAdicional1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButtonAdicional2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(btnPapas, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnPure, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(34, 34, 34)
                         .addComponent(jLabel2)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jButtonPlato1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButtonPlato2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButtonPlato3, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(btnHamburguesa, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnPollo, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnPizza, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnHotDog, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jButtonCrearCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButtonAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(btnCrear, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(74, 74, 74))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
@@ -266,41 +321,61 @@ public class Vista extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonCombo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCombo4ActionPerformed
+    private void btnCombo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCombo4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonCombo4ActionPerformed
+    }//GEN-LAST:event_btnCombo4ActionPerformed
 
-    private void jButtonAdicional1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdicional1ActionPerformed
+    private void btnPapasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPapasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonAdicional1ActionPerformed
+    }//GEN-LAST:event_btnPapasActionPerformed
 
-    private void jButtonAdicional2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdicional2ActionPerformed
+    private void btnPureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPureActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonAdicional2ActionPerformed
+    }//GEN-LAST:event_btnPureActionPerformed
 
-    private void jButtonPlato1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPlato1ActionPerformed
+    private void btnHamburguesaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHamburguesaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonPlato1ActionPerformed
+    }//GEN-LAST:event_btnHamburguesaActionPerformed
 
-    private void jButtonAdicional3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdicional3ActionPerformed
+    private void btnTreslechesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTreslechesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonAdicional3ActionPerformed
+    }//GEN-LAST:event_btnTreslechesActionPerformed
 
-    private void jButtonPlato2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPlato2ActionPerformed
+    private void btnPolloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPolloActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonPlato2ActionPerformed
+    }//GEN-LAST:event_btnPolloActionPerformed
 
-    private void jButtonPlato3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPlato3ActionPerformed
+    private void btnPizzaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPizzaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonPlato3ActionPerformed
+    }//GEN-LAST:event_btnPizzaActionPerformed
 
-    private void jButtonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgregarActionPerformed
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonAgregarActionPerformed
+    }//GEN-LAST:event_btnAddActionPerformed
 
-    private void jButtonCrearComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrearComboActionPerformed
+    private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonCrearComboActionPerformed
+    }//GEN-LAST:event_btnCrearActionPerformed
+
+    private void btnCombo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCombo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCombo1ActionPerformed
+
+    private void btnEnsaladaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnsaladaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEnsaladaActionPerformed
+
+    private void btnHotDogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHotDogActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHotDogActionPerformed
+
+    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBorrarActionPerformed
+
+    private void btnTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTotalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTotalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -341,25 +416,29 @@ public class Vista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonAdicional1;
-    private javax.swing.JButton jButtonAdicional2;
-    private javax.swing.JButton jButtonAdicional3;
-    private javax.swing.JButton jButtonAgregar;
-    private javax.swing.JButton jButtonBebida1;
-    private javax.swing.JButton jButtonBebida2;
-    private javax.swing.JButton jButtonBebida3;
-    private javax.swing.JButton jButtonCombo1;
-    private javax.swing.JButton jButtonCombo2;
-    private javax.swing.JButton jButtonCombo3;
-    private javax.swing.JButton jButtonCombo4;
-    private javax.swing.JButton jButtonCombo5;
-    private javax.swing.JButton jButtonCrearCombo;
-    private javax.swing.JButton jButtonPlato1;
-    private javax.swing.JButton jButtonPlato2;
-    private javax.swing.JButton jButtonPlato3;
+    public javax.swing.JButton btnAdd;
+    public javax.swing.JButton btnBorrar;
+    public javax.swing.JButton btnCafe;
+    public javax.swing.JButton btnCombo1;
+    public javax.swing.JButton btnCombo2;
+    public javax.swing.JButton btnCombo3;
+    public javax.swing.JButton btnCombo4;
+    public javax.swing.JButton btnCombo5;
+    public javax.swing.JButton btnCrear;
+    public javax.swing.JButton btnEnsalada;
+    public javax.swing.JButton btnGaseosa;
+    public javax.swing.JButton btnHamburguesa;
+    public javax.swing.JButton btnHotDog;
+    public javax.swing.JButton btnNatural;
+    public javax.swing.JButton btnPapas;
+    public javax.swing.JButton btnPizza;
+    public javax.swing.JButton btnPollo;
+    public javax.swing.JButton btnPure;
+    public javax.swing.JButton btnTotal;
+    public javax.swing.JButton btnTresleches;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextFactura;
+    public javax.swing.JTextField jTextFactura;
     // End of variables declaration//GEN-END:variables
 }

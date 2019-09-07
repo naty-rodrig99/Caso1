@@ -12,20 +12,118 @@ import Model.Bebida;
 import Model.Adicional;
 import Model.Combo;
 import Model.Combo.ComboBuilder;
-
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import Model.ComboFactory;
+import View.Vista;
 
 
-public class Controlador {
-    public static ArrayList orden;
+public class Controlador implements ActionListener {
+    public static ArrayList<String> comandos ;
+    public static ArrayList<Combo> orden;
     public static Dictionary productos = new Hashtable(); 
+    private Vista vista;
     
     
-    public Controlador(){
+    public Controlador(Vista v){
         orden = new ArrayList();
+        comandos = new ArrayList();
         initProductos();
         initPredefinidos();
-        
+        this.vista = v;
+        this.vista.btnCombo1.addActionListener(this);
+        this.vista.btnCombo2.addActionListener(this);
+        this.vista.btnCombo3.addActionListener(this);
+        this.vista.btnCombo4.addActionListener(this);
+        this.vista.btnCombo5.addActionListener(this);
+        this.vista.btnAdd.addActionListener(this);
+        this.vista.btnCrear.addActionListener(this);
+        this.vista.btnPapas.addActionListener(this);
+        this.vista.btnPure.addActionListener(this);
+        this.vista.btnTresleches.addActionListener(this);
+        this.vista.btnCafe.addActionListener(this);
+        this.vista.btnNatural.addActionListener(this);
+        this.vista.btnGaseosa.addActionListener(this);
+        this.vista.btnPollo.addActionListener(this);
+        this.vista.btnPizza.addActionListener(this);
+        this.vista.btnHamburguesa.addActionListener(this);
+        this.vista.btnBorrar.addActionListener(this);
+  
+    }
+    public void iniciarVista(){
+    vista.setVisible(true);
+    }
+    
+    
+    
+    @Override
+    public void actionPerformed(ActionEvent e){
+        if(e.getSource()== vista.btnCombo1 ){
+            comandos.add("Combo 1");
+        }
+        else{
+            if(e.getSource()== vista.btnCombo2 ){
+                comandos.add("Combo 2");
+            }
+            if(e.getSource()== vista.btnCombo3 ){
+                comandos.add("Combo 3");
+            }
+            if(e.getSource()== vista.btnCombo4){
+                comandos.add("Combo 4");
+            }
+            if(e.getSource()== vista.btnCombo5 ){
+                comandos.add("Combo 5");
+            }
+            if(e.getSource()== vista.btnPapas){
+                comandos.add("papas");
+            }
+            if(e.getSource()== vista.btnPure ){
+                comandos.add("pure");
+            }
+            if(e.getSource()== vista.btnTresleches){
+                comandos.add("tres leches");
+            }
+            if(e.getSource()== vista.btnCafe){
+                comandos.add("cafe");
+            }
+            if(e.getSource()== vista.btnNatural){
+                comandos.add("natural");
+            }
+            if(e.getSource()== vista.btnGaseosa){
+                comandos.add("gaseosa");
+            }
+            if(e.getSource()== vista.btnPizza){
+                comandos.add("pizza");
+            }
+            if(e.getSource()== vista.btnPollo){
+                comandos.add("pollo");
+            }
+            if(e.getSource()== vista.btnPapas){
+                comandos.add("papas");
+            }
+            if(e.getSource()== vista.btnAdd){
+                if(comandos.size()==1){
+                    Controlador.agregarPredefinido(comandos.get(0));
+                }
+                else{
+                    String name = comandos.get(0);
+                    comandos.remove(0);
+                    Controlador.agregarModificado(name, comandos);
+                }
+            }
+            if(e.getSource() == vista.btnCrear){
+                Controlador.agregarComboBuilder(comandos);
+            }
+            if(e.getSource() == vista.btnBorrar){
+                comandos.clear();
+                orden.clear();
+                vista.jTextFactura.setText("");
+            }
+            if(e.getSource() == vista.btnTotal){
+                String p = imprimirPrecios();
+                vista.jTextFactura.setText(p);
+            }
+        }
         
         
     }
@@ -72,10 +170,10 @@ public class Controlador {
         
     }
     
-    public void agregarPredefinido(String nombre){          //pasa el nombre del combo predefinido y lo agrega a la orden
-        orden.add(ComboFactory.getPrototype(nombre));
+    public static void agregarPredefinido(String nombre){          //pasa el nombre del combo predefinido y lo agrega a la orden
+        orden.add((Combo)ComboFactory.getPrototype(nombre));
     }
-    public void agregarComboBuilder(ArrayList<String> nombreProducto){          //pasa el nombre del combo predefinido y lo agrega a la orden
+    public static void agregarComboBuilder(ArrayList<String> nombreProducto){          //pasa el nombre del combo predefinido y lo agrega a la orden
         
         ArrayList <Producto> listaProductos = new ArrayList();
         for(String nombre:nombreProducto){
@@ -93,7 +191,7 @@ public class Controlador {
         
     }
     
-    public void agregarModificado(String nombreOriginal, ArrayList<String> agregar){
+    public static void agregarModificado(String nombreOriginal, ArrayList<String> agregar){
         Combo c = (Combo)(ComboFactory.getPrototype(nombreOriginal));
         ArrayList<Producto> productosCombo = c.getProductos();
         
@@ -105,7 +203,22 @@ public class Controlador {
         c.setProductos(productosCombo);
         orden.add(c);
     }
+    public void limpiarOrden(){
+        orden.clear();
+    }
     
+    public String imprimirPrecios(){
+        String print="";
+        int total=0;
+        for(Combo c:orden){
+           for(Producto p:c.getProductos()){
+               print+="Nombre:"+p.getNombre()+"\nCodigo:"+p.getCodigo()+"\nPrecio:"+p.getPrecio()+"\n\n";
+               total+=p.getPrecio();
+           } 
+        }
+        print+="Total: "+total;
+        return print;
+    }
     
     public void initProductos(){
         productos.put("hamburguesa",(Producto)(new Plato("P-01","Hamburguesa",1200)));
@@ -127,7 +240,9 @@ public class Controlador {
     
     
     public static void main(String args[]) {
-        
+        Vista vista = new Vista();
+        Controlador controlador = new Controlador(vista);
+        controlador.iniciarVista();
 
        
     }

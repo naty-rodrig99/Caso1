@@ -64,11 +64,4 @@ public class Combo implements Icombo<Combo> {
     
     
     
-     public static void main(String args[]) {
-        
-       //ComboBuilder c1 = new Combo.ComboBuilder().addPlato("1", "gato encebollado", 2200).addBebida("2", "fresco", 500).addAdicional("1", "cebolla", 100).build();
-       //Producto p = (Producto)(new Plato("P-01","Hamburguesa",1200));
-       //System.out.println("hola");
-       
-    }
 }
